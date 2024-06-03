@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="vote.css">
+</head>
+<body >
+
+
+
+    <div class="container"> <div class="box">
+        <div>
+            <input type="number" placeholder="enter your age " autofocus>
+            <div>
+                <p></p>
+            </div>
+     <div> <button onclick="vote()">submit</button></div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <script>
+
+
+const input=document.querySelector('input')
+const text=document.querySelector('p')
+const btn=document.querySelector('button')
+// console.log(input,text,btn);
+
+
+function vote (){
+    //   text.innerHTML=input.value
+           if(input.value == ''){
+text.innerText=''
+
+           }
+     else if(input.value<17){
+text.innerText='sorry! you are a below 18'
+text.style.color='red'
+
+      }
+      else if(input.value>18 && input.value<65){
+text.innerText='congrats! you are eligible for the vote'
+text.style.color='green'
+      }
+
+      else{
+     text.innerText='sorry! you are above 65'
+     text.style.color='red'
+      }
+// console.log('ys');
+  }
+
+
+
+    </script>
+</body>
+</html>
